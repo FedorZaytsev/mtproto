@@ -1050,7 +1050,7 @@ func (session *Session) makeAuthKey() ([]byte, []byte, []byte, error) {
 	return authKey, authKeyHash, salt, nil
 }
 
-func (x *Session) apiDcOption(ipVersion string, id int32) (*PredDcOption, error) {
+func (x *Session) ApiDcOption(ipVersion string, id int32) (*PredDcOption, error) {
 	m, ok := x.dcOptions[id]
 	if !ok {
 		return nil, fmt.Errorf("invalid DC ID: %d", id)
@@ -1085,4 +1085,3 @@ func (e TL_rpc_error) Error() string {
 		return fmt.Sprintf("mtproto unknow RPC error: %d %s", e.error_code, e.error_message)
 	}
 }
-

@@ -194,7 +194,7 @@ func (mm *Manager) NewAuthentication(phone string, apiID int32, apiHash, ip stri
 				if isIPv6(session.c.IP) {
 					ipVersion = ipv6
 				}
-				dcOption, err := session.apiDcOption(ipVersion, newdc)
+				dcOption, err := session.ApiDcOption(ipVersion, newdc)
 				if err != nil {
 					return nil, nil, err
 				}
